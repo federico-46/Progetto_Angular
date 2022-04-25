@@ -1,0 +1,83 @@
+<section *ngIf="resCompany" class="container my-4 py-1" id="header-company">
+  <img
+    class="logo-company"
+    [src]="resCompany.refs.logo_image ? resCompany.refs.logo_image : ''"
+  />
+
+  <div class="pe-5">
+    <button [routerLink]="['/singleDetail']" class="btn btn-primary">
+      Back Offer
+    </button>
+  </div>
+</section>
+
+<section *ngIf="resCompany" class="container py-5">
+  <div class="row">
+    <div class="col-6">
+      <div
+        id="carouselExampleFade"
+        class="carousel carousel-dark slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              [src]="resCompany.refs.f1_image ? resCompany.refs.f1_image : ''"
+              class="d-block w-100"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              [src]="resCompany.refs.f2_image ? resCompany.refs.f2_image : ''"
+              class="d-block w-100"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              [src]="resCompany.refs.f3_image ? resCompany.refs.f3_image : ''"
+              class="d-block w-100"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="col-6">
+      <div>
+        <h4>Name: {{ resCompany.name | uppercase }}</h4>
+        <h6 class="mb-3" *ngFor="let loc of resCompany.locations">
+          Location: {{ loc.name | uppercase }}
+        </h6>
+        <p class="my-0 py-0">Type: {{ resCompany.model_type | uppercase }}</p>
+        <p class="my-0 py-0">Size: {{ resCompany.size.name | uppercase }}</p>
+      </div>
+      <label>Industries : </label>
+      <ul>
+        <li *ngFor="let item of resCompany.industries">
+          {{ item.name | uppercase }}
+        </li>
+      </ul>
+      <div>
+        <h5>Description:</h5>
+        <p>{{ resCompany.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

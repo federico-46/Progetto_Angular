@@ -1,0 +1,39 @@
+<section class="container my-4 py-1" id="header-details">
+  <div>
+    <p class="muted">
+      {{ singAd.publication_date ? singAd.publication_date : "Unknown" }}
+    </p>
+    <h3 *ngIf="singAd">{{ singAd.name ? singAd.name : "Unknown" }}</h3>
+    <h5 *ngFor="let item of singAd.categories">
+      {{ item.name ? item.name : "Unknown" }}
+    </h5>
+    <div class="pt-1" *ngFor="let item of singAd.levels">
+      {{ item.name ? (item.name | uppercase) : "Unknown" }}
+    </div>
+  </div>
+  <div class="pe-5">
+    <button class="btn btn-primary" [routerLink]="['']">Back Home</button>
+  </div>
+</section>
+
+<section class="container my-4 py-3" id="company-detail">
+  <h5 class="py-0 my-0">Company Details</h5>
+
+  <h6 class="py-0 my-0">
+    Name :
+    {{ singAd.company.name ? (singAd.company.name | uppercase) : "Unknown" }}
+  </h6>
+  <h6 class="py-0 my-0" *ngFor="let item of singAd.locations">
+    Location : {{ item.name ? (item.name | uppercase) : "Unknown" }}
+  </h6>
+
+  <div class="pe-5">
+    <button class="btn-primary btn" [routerLink]="['/companyDetails']">
+      More Details
+    </button>
+  </div>
+</section>
+
+<section class="container my-5 py-1" id="contents-sec">
+  <div [innerHTML]="singAd.contents"></div>
+</section>
