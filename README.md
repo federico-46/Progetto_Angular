@@ -1,6 +1,9 @@
-# ProgettoAngular
+# Job Search
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
+
+This project is a job search site that has "Software Engineering" as its default category.
+On the site you can select the various levels of experience and view the details of both the various announcements and companies
 
 ## Development server
 
