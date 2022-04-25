@@ -19,7 +19,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '', //da mettere 404 page component
+    redirectTo: '',
   },
 ];
 
