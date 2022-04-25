@@ -1,9 +1,15 @@
 # Job Search
 
+![Alt text](src/assets/image_app.PNG "image")
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 
 This project is a job search site that has "Software Engineering" as its default category.
 On the site you can select the various levels of experience and view the details of both the various announcements and companies
+
+## Getting Started
+
+To Starting using this Application, go to https://job-search-c19c9.web.app/, or if you want to try it locally download the project and run "ng serve".
 
 ## Development server
 
@@ -28,3 +34,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Contact
+
+Email: federicocorrado46@gmail.com
